@@ -31,11 +31,7 @@ import { RouterModule, Routes } from '@angular/router';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    RouterModule.forRoot([
-        { path: '', redirectTo: '/', pathMatch: 'full' },
-        { path: 'register', component: RegisterComponent },
-        { path: 'login', component: LoginComponent }
-  ])],
+   ],
   providers: [],
   bootstrap: [AppComponent]
 })
