@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatSliderModule } from '@angular/material/slider';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { RouterModule, Routes } from '@angular/router';
+import {AuctionService} from './services/auction.service';
 
 
 @NgModule({
@@ -31,8 +33,9 @@ import { RouterModule, Routes } from '@angular/router';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    HttpClientModule,
    ],
-  providers: [],
+  providers: [AuctionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
