@@ -1,0 +1,23 @@
+<div class="h-100 d-flex flex-row align-items-center">
+  <div class="d-flex justify-content-center">
+    <div class="col">
+      <img src="assets/images/{{auctions.photos}}" style="max-width: 85%" class="img-fluid ">
+    </div>
+
+    <div class="col"><h1 class="display-1">
+      <b>{{auctions.title}}</b></h1>
+      <br>
+      <h2>{{auctions.description}}</h2>
+      <br>
+      <div class = "d-inline-flex w-100 mrg-btm-xs">
+          <h2>Buy now price: {{auctions.buyNowPrice}} ron | </h2>
+
+          <h2> <p style="white-space: pre"> Last bidding price: {{auctions.minimumPrice}} ron </p></h2>
+      </div>
+      <button type="button" class="btn btn-primary btn-lg"> Buy Now</button>
+      <pre> </pre>
+      <button type="button" class="btn btn-primary btn-lg"> New Bid </button>
+    </div>
+
+  </div>
+</div>
