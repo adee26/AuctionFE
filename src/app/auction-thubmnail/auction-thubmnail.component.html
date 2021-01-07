@@ -6,7 +6,7 @@
 
   <div class="row text-center text-lg-left">
     <div class="col-lg-3 col-md-4 col-6" *ngFor="let recentlyAuction of recentlyAuctions">
-      <a href="#" class="d-block mb-4 h-100 text-center">
+      <a [routerLink]="['/auction', recentlyAuction.id]"  class="d-block mb-4 h-100 text-center">
         <img class="img-fluid img-thumbnail" src="/assets/images/{{recentlyAuction.photos}}" style="height: 150px;"
           alt="">
         <br>
@@ -21,7 +21,7 @@
   <hr class="mt-2 mb-5">
   <div class="row text-center text-lg-left">
     <div class="col-lg-3 col-md-4 col-6" *ngFor="let endingAuction of endingAuctions">
-      <a href="#" class="d-block mb-4 h-100 text-center">
+      <a [routerLink]="['/auction', endingAuction.id]" class="d-block mb-4 h-100 text-center">
         <img class="img-fluid img-thumbnail" src="/assets/images/{{endingAuction.photos}}" style="height: 150px;"
           alt="">
         <br>
@@ -36,7 +36,7 @@
   <hr class="mt-2 mb-5">
   <div class="row text-center text-lg-left">
     <div class="col-lg-3 col-md-4 col-6" *ngFor="let recentlyEndedAuction of recentlyEndedAuctions">
-      <a href="#" class="d-block mb-4 h-100 text-center">
+      <a [routerLink]="['/auction', recentlyEndedAuction.id]" class="d-block mb-4 h-100 text-center">
         <img class="img-fluid img-thumbnail" src="/assets/images/{{recentlyEndedAuction.photos}}" style="height: 150px;"
           alt="">
         <br>
