@@ -18,4 +18,8 @@ export class AuctionService {
   getAuctions(){
     return this.http.get('/server/api/v1/auctions');
   }
+
+  getAuctionById(id: number){
+    return this.http.get('/server/api/v1/auction/' + id);
+  }
 }

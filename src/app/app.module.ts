@@ -15,13 +15,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { RouterModule, Routes } from '@angular/router';
 import {AuctionService} from './services/auction.service';
+import { AuctionComponent } from './components/auction/auction.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    AuctionComponent
   ],
   imports: [
     BrowserModule,
