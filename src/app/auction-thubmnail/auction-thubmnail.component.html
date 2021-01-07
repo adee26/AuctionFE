@@ -1,0 +1,50 @@
+<div class="container">
+
+  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Recently added auctions</h1>
+
+  <hr class="mt-2 mb-5">
+
+  <div class="row text-center text-lg-left">
+    <div class="col-lg-3 col-md-4 col-6" *ngFor="let recentlyAuction of recentlyAuctions">
+      <a href="#" class="d-block mb-4 h-100 text-center">
+        <img class="img-fluid img-thumbnail" src="/assets/images/{{recentlyAuction.photos}}" style="height: 150px;"
+          alt="">
+        <br>
+        <span>Price: </span>
+        <span>{{recentlyAuction.minimumPrice}}</span><br>
+        <span>End in:
+        </span>
+      </a>
+    </div>
+  </div>
+  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Ending auctions</h1>
+  <hr class="mt-2 mb-5">
+  <div class="row text-center text-lg-left">
+    <div class="col-lg-3 col-md-4 col-6" *ngFor="let endingAuction of endingAuctions">
+      <a href="#" class="d-block mb-4 h-100 text-center">
+        <img class="img-fluid img-thumbnail" src="/assets/images/{{endingAuction.photos}}" style="height: 150px;"
+          alt="">
+        <br>
+        <span>Price: </span>
+        <span>{{endingAuction.minimumPrice}}</span><br>
+        <span>End in:
+        </span>
+      </a>
+    </div>
+  </div>
+  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Recently ended auctions</h1>
+  <hr class="mt-2 mb-5">
+  <div class="row text-center text-lg-left">
+    <div class="col-lg-3 col-md-4 col-6" *ngFor="let recentlyEndedAuction of recentlyEndedAuctions">
+      <a href="#" class="d-block mb-4 h-100 text-center">
+        <img class="img-fluid img-thumbnail" src="/assets/images/{{recentlyEndedAuction.photos}}" style="height: 150px;"
+          alt="">
+        <br>
+        <span>Price: </span>
+        <span>{{recentlyEndedAuction.minimumPrice}}</span><br>
+        <span>End in:
+        </span>
+      </a>
+    </div>
+  </div>
+</div>

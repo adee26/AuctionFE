@@ -1,9 +1,14 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <span><a href="/">HOME</a></span>
+    <button mat-button [matMenuTriggerFor]="menu">Categories</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+    </mat-menu>
     <span class="spacer"></span>
     <a mat-button routerLink="/register">Register</a>
     <a mat-button routerLink="/login">Login</a>
   </mat-toolbar-row>
 </mat-toolbar>
+<app-home></app-home>
 <router-outlet></router-outlet>
