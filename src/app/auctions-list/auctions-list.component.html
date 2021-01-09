@@ -1,0 +1,13 @@
+<div class="row text-center text-lg-left">
+    <div class="col-lg-3 col-md-4 col-6" *ngFor="let auction of auctionList">
+      <a [routerLink]="['/auction', auction.id]" class="d-block mb-4 h-100 text-center">
+        <img class="img-fluid img-thumbnail" src="/assets/images/{{auction.photos}}" style="height: 150px;"
+          alt="">
+        <br>
+        <span>Price: </span>
+        <span>{{auction.minimumPrice}}</span><br>
+        <span>End in:
+        </span>
+      </a>
+    </div>
+  </div>

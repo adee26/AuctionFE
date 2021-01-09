@@ -23,6 +23,7 @@ import { AuctionComponent } from './components/auction/auction.component';
 import { HomeComponent } from './home/home.component';
 import { AuctionThubmnailComponent } from './auction-thubmnail/auction-thubmnail.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { AuctionsListComponent } from './auctions-list/auctions-list.component';
 
 
 
@@ -33,7 +34,8 @@ import {MatMenuModule} from '@angular/material/menu';
     LoginComponent,
     AuctionComponent,
     HomeComponent,
-    AuctionThubmnailComponent
+    AuctionThubmnailComponent,
+    AuctionsListComponent
   ],
   imports: [
     BrowserModule,
