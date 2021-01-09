@@ -5,14 +5,15 @@ import {RegisterComponent} from './register/register.component';
 import {LoginComponent} from './login/login.component';
 import {AppComponent} from './app.component';
 import {AuctionComponent} from './components/auction/auction.component';
+import {AuthenticationGuard} from './authentication.guard';
 
 
 const routes: Routes = [
-  
+
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   {path: '', component: HomeComponent},
-  { path: 'auction/:id', component: AuctionComponent},
+  { path: 'auction/:id', component: AuctionComponent, canActivate: [AuthenticationGuard]},
   { path: '', redirectTo: '/', pathMatch: 'full' }
 ];
 
