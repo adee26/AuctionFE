@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from './../services/category.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,10 +11,17 @@ export class AuctionsListComponent implements OnInit {
 
   public auctionList;
 
-  constructor(private categoryService : CategoryService, private activatedRoute: ActivatedRoute) { }
+  constructor(private categoryService : CategoryService, private activatedRoute: ActivatedRoute, private router : Router) {
+    this.getAuctionListByCategoryId(this.activatedRoute.snapshot.params['id']);
+   }
 
   ngOnInit(): void {
-    this.getAuctionListByCategoryId(this.activatedRoute.snapshot.params.id);
+    this.activatedRoute.paramMap.subscribe(
+      (param : any) => {
+        const id = param.get('id'); 
+        this.getAuctionListByCategoryId(id);
+      }
+    );
   }
 
   getAuctionListByCategoryId(id : number){

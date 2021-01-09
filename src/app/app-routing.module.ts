@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', component: HomeComponent },
   { path: 'auction/:id', component: AuctionComponent },
-  { path: 'category/:id', component: AuctionsListComponent },
+  { path: 'category/:id', component: AuctionsListComponent, pathMatch: 'full' },
   { path: 'auction/:id', component: AuctionComponent, canActivate: [AuthenticationGuard]},
    { path: '', redirectTo: '/', pathMatch: 'full' }
 ];

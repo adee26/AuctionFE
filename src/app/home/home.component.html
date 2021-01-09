@@ -1,12 +1,1 @@
-<nav >
-    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" role="tab"
-            aria-controls="nav-home" aria-selected="true" routerLink = "/">Home</a>
-        <a class="nav-item nav-link" data-toggle="tab" href="" role="tab" aria-selected="false"
-            *ngFor="let category of categories" [routerLink] = "['/category',category.id]" >{{category.name}}</a>
-    </div>
-</nav>
-
 <app-auction-thubmnail></app-auction-thubmnail>
-
-
