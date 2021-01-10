@@ -23,6 +23,9 @@ import { AuctionComponent } from './components/auction/auction.component';
 import { HomeComponent } from './home/home.component';
 import { AuctionThubmnailComponent } from './auction-thubmnail/auction-thubmnail.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { UserComponent } from './user/user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import {ReactiveFormsModule} from '@angular/forms';
 import { AuctionsListComponent } from './auctions-list/auctions-list.component';
 
 
@@ -34,6 +37,9 @@ import { AuctionsListComponent } from './auctions-list/auctions-list.component';
     LoginComponent,
     AuctionComponent,
     HomeComponent,
+    AuctionThubmnailComponent,
+    UserComponent,
+    EditUserComponent
     AuctionThubmnailComponent,
     AuctionsListComponent
   ],
@@ -49,7 +55,8 @@ import { AuctionsListComponent } from './auctions-list/auctions-list.component';
     MatInputModule,
     HttpClientModule,
     RouterModule,
-    MatMenuModule
+    MatMenuModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuctionService,

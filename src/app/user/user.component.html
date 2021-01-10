@@ -1,0 +1,21 @@
+<br>
+<h1> Welcome, {{user.name}}! </h1>
+<br>
+<table class="table table-bordered">
+  <tr> <h2> Account Information </h2> </tr>
+  <tr> <h3> <b> Account Name:</b>  {{user.name}}</h3> </tr>
+  <tr> <h3> <b> Email Address: </b> {{user.email}} </h3> </tr>
+  <tr> <h3> <b> Account Creation Date:</b> {{user.creationDate}} </h3></tr>
+  <tr> <button class="btn btn-primary btn-lgn" routerLink="/user/edit/{{user.id}}"> Edit Details </button> </tr>
+  <br>
+</table>
+
+<br>
+
+<table class="table table-bordered">
+  <tr> <h2> Biddings </h2> </tr>
+  <tr *ngFor="let bidding of biddings">
+    <td> <h3> <b> Auction name: </b> <a href="http://localhost:4200/auction/{{bidding.auction.id}}" target="_blank" >{{bidding.auction.title}} </a></h3></td>
+    <td><h3> Auction end date: {{bidding.auction.endDate}}</h3></td>
+  </tr>
+</table>
