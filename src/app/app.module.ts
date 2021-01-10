@@ -26,6 +26,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { UserComponent } from './user/user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { AuctionsListComponent } from './auctions-list/auctions-list.component';
 
 
 
@@ -39,6 +40,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     AuctionThubmnailComponent,
     UserComponent,
     EditUserComponent
+    AuctionThubmnailComponent,
+    AuctionsListComponent
   ],
   imports: [
     BrowserModule,

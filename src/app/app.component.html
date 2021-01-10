@@ -1,9 +1,9 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <span><a href="/">HOME</a></span>
-    <button mat-button [matMenuTriggerFor]="menu">Categories</button>
+    <button mat-button [matMenuTriggerFor]="menu" >Categories</button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item *ngFor = "let category of categories" [routerLink] = "['/category',category.id]">{{category.name}}</button>
     </mat-menu>
     <span class="spacer"></span>
     <a mat-button routerLink="/register">Register</a>
