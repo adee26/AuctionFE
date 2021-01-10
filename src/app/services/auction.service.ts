@@ -24,11 +24,11 @@ export class AuctionService {
   }
 
   getEndingAuctions(){
-    return this.http.get('/server/api/v1/auction/ending')
+    return this.http.get('/server/api/v1/auction/ending');
   }
 
   getRecentlyEndedAuctions(){
-    return this.http.get("/server/api/v1/auction/recentlyEnded");
+    return this.http.get('/server/api/v1/auction/recentlyEnded');
   }
 
   getAuctionById(id: number){

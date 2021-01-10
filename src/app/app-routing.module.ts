@@ -6,6 +6,8 @@ import {LoginComponent} from './login/login.component';
 import {AppComponent} from './app.component';
 import {AuctionComponent} from './components/auction/auction.component';
 import {AuthenticationGuard} from './authentication.guard';
+import {UserComponent} from './user/user.component';
+import {EditUserComponent} from './edit-user/edit-user.component';
 
 
 const routes: Routes = [
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   {path: '', component: HomeComponent},
+  {path: 'users/:id', component: UserComponent},
+  {path: 'user/edit/:id', component: EditUserComponent},
   { path: 'auction/:id', component: AuctionComponent, canActivate: [AuthenticationGuard]},
   { path: '', redirectTo: '/', pathMatch: 'full' }
 ];
