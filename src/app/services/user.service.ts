@@ -11,6 +11,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class UserService {
+  tempId: number;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -21,4 +22,14 @@ export class UserService {
     // let body = JSON.stringify(user);
     return this.httpClient.put<User>('server/api/v1/users/' + user.id, user);
   }
+  createUser(user){
+    return this.httpClient.post('server/api/v1/users/', user);
+  }
+  login(userDTO): Observable<any>{
+    return this.httpClient.post('/server/api/v1/users/login', userDTO, httpOptions);
+  }
+  getUserByEmail(userDTO): Observable<number>{
+    return this.httpClient.post<number>('/server/api/v1/users/loginId',  userDTO);
+  }
+
 }

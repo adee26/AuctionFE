@@ -1,35 +1,36 @@
 <mat-toolbar>
   <span>Registration</span>
 </mat-toolbar>
+<form [formGroup]="registerForm" (ngSubmit)="register()" novalidate>
 <mat-card class="my-card">
   <mat-card-content>
         <mat-form-field class="full-width">
-          <mat-label>First Name</mat-label>
-          <input  matInput  placeholder="First name"  name="fname"  required>
+          <mat-label>Name</mat-label>
+          <input class = "form-control" formControlName="name" matInput  placeholder="Name"  name="name"  required>
         </mat-form-field>
-    <br/>
-        <mat-form-field class="full-width">
-          <mat-label>Last Name</mat-label>
-          <input  matInput  placeholder="Last Name" name="lname"  required>
-        </mat-form-field>
-    <br/>
-        <mat-form-field class="full-width">
-          <mat-label>Address</mat-label>
-          <input  matInput  placeholder="Address" name="address"  required>
-        </mat-form-field>
+<!--    <br/>-->
+<!--        <mat-form-field class="full-width">-->
+<!--          <mat-label>Address</mat-label>-->
+<!--          <input  matInput  placeholder="Address" name="address"  required>-->
+<!--        </mat-form-field>-->
+<!--    <br/>-->
     <br/>
         <mat-form-field class="full-width">
           <mat-label>Email</mat-label>
-          <input  matInput  placeholder="Email" name="email">
+          <input class="form-control" type="email" formControlName="email" matInput  placeholder="Email" name="email" required>
         </mat-form-field>
     <br/>
         <mat-form-field class="full-width">
           <mat-label>Password</mat-label>
-          <input  matInput  placeholder="Password"  name="password">
+          <input class="form-control" type="password" formControlName="password" matInput  placeholder="Password"  name="password" required>
         </mat-form-field>
     <br/>
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="primary">REGISTER</button>
   </mat-card-actions>
+  <div *ngIf="validMessage != '' ">
+    <h3 class="has-info">{{validMessage}}</h3>
+  </div>
 </mat-card>
+</form>
