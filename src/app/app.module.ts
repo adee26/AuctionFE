@@ -25,9 +25,9 @@ import { AuctionThubmnailComponent } from './auction-thubmnail/auction-thubmnail
 import {MatMenuModule} from '@angular/material/menu';
 import { UserComponent } from './user/user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AuctionsListComponent } from './auctions-list/auctions-list.component';
-
+import {CookieService} from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -39,7 +39,7 @@ import { AuctionsListComponent } from './auctions-list/auctions-list.component';
     HomeComponent,
     AuctionThubmnailComponent,
     UserComponent,
-    EditUserComponent
+    EditUserComponent,
     AuctionThubmnailComponent,
     AuctionsListComponent
   ],
@@ -56,7 +56,8 @@ import { AuctionsListComponent } from './auctions-list/auctions-list.component';
     HttpClientModule,
     RouterModule,
     MatMenuModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     AuctionService,

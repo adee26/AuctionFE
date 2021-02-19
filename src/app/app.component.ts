@@ -1,5 +1,6 @@
 import { CategoryService } from './services/category.service';
 import { Component, OnInit } from '@angular/core';
+import {CookieService} from 'ngx-cookie-service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   title = 'AuctionFE';
   public categories;
-  constructor(private categoryService : CategoryService){
+  constructor(private categoryService: CategoryService){
   }
 
   ngOnInit(){

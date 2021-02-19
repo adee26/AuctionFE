@@ -31,7 +31,8 @@ export class EditUserComponent implements OnInit {
       console.log(this.userForm.value);
       this.user = {
         id: this.activatedRoute.snapshot.params.id,
-        name: this.userForm.value.name, email: this.userForm.value.email
+        name: this.userForm.value.name,
+        email: this.userForm.value.email
       };
       this.userService.editUser(this.user).subscribe(
         data => {
