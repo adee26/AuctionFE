@@ -19,9 +19,7 @@ export class LoginComponent implements OnInit {
   subscription: Subscription;
   subscriptionNumber: Subscription;
   isLoggedIn: boolean;
-  loginCookie: number;
   user: User;
-  userDTO: UserDTO;
   id: number;
   emailUser: string;
 

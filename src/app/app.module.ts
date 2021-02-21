@@ -28,6 +28,9 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AuctionsListComponent } from './auctions-list/auctions-list.component';
 import {CookieService} from 'ngx-cookie-service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -41,24 +44,27 @@ import {CookieService} from 'ngx-cookie-service';
     UserComponent,
     EditUserComponent,
     AuctionThubmnailComponent,
-    AuctionsListComponent
+    AuctionsListComponent,
+    DialogBoxComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatSliderModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    HttpClientModule,
-    RouterModule,
-    MatMenuModule,
-    ReactiveFormsModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatSliderModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        HttpClientModule,
+        RouterModule,
+        MatMenuModule,
+        ReactiveFormsModule,
+        FormsModule,
+        NgbModule,
+        MatDialogModule
+    ],
   providers: [
     AuctionService,
     CategoryService

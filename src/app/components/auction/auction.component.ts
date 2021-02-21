@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {AuctionService} from '../../services/auction.service';
 import {ActivatedRoute} from '@angular/router';
+import {CookieService} from 'ngx-cookie-service';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {DialogBoxComponent} from '../../dialog-box/dialog-box.component';
+
 
 @Component({
   selector: 'app-auction',
@@ -9,11 +13,16 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class AuctionComponent implements OnInit {
   public auctions;
+  closeResult = '';
+  id: number;
 
-  constructor(private auctionService: AuctionService, private activatedRoute: ActivatedRoute) { }
+  constructor(private auctionService: AuctionService, private activatedRoute: ActivatedRoute,
+              private cookieService: CookieService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getAuction(this.activatedRoute.snapshot.params.id);
+    console.log(this.cookieService.get('user-id'));
+    this.id = this.activatedRoute.snapshot.params.id;
   }
 
   getAuction(id: number){
@@ -22,6 +31,16 @@ export class AuctionComponent implements OnInit {
         this.auctions = data;
       }, error => console.log()
     );
+  }
+
+  openDialog(): void{
+    const dialogRef = this.dialog.open(DialogBoxComponent, {
+      // width: '500px',
+      data: {id: this.id}
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
 

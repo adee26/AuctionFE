@@ -16,9 +16,12 @@
       </div>
       <br>
       <h2>End date: {{auctions.endDate}}</h2>
+
       <button type="button" class="btn btn-primary btn-lg"> Buy Now</button>
       <pre> </pre>
-      <button type="button" class="btn btn-primary btn-lg"> New Bid </button>
+<!--      <button type="button" class="btn btn-primary btn-lg"> New Bid </button>-->
+
+      <button mat-raised-button (click)="openDialog()"> New Bid </button>
     </div>
 
   </div>
