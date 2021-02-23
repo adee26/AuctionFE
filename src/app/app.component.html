@@ -9,6 +9,7 @@
     <a mat-button routerLink="/register">Register</a>
     <a mat-button routerLink="/login">Login</a>
     <a mat-button routerLink="/users/{{id}}">My Account</a>
+    <a mat-button (click)="logout()">Log out</a>
   </mat-toolbar-row>
 </mat-toolbar>
 <router-outlet></router-outlet>

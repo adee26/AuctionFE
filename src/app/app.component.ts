@@ -26,4 +26,7 @@ export class AppComponent implements OnInit{
       err => console.log(err)
     );
   }
+  logout(){
+    this.cookieService.set('user-id', '0');
+  }
 }
