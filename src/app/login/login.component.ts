@@ -7,6 +7,7 @@ import {UserService} from '../services/user.service';
 import {CookieService} from 'ngx-cookie-service';
 import {User} from '../models/user.model';
 import {UserDTO} from '../models/UserDTO';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -19,13 +20,11 @@ export class LoginComponent implements OnInit {
   subscription: Subscription;
   subscriptionNumber: Subscription;
   isLoggedIn: boolean;
-  loginCookie: number;
   user: User;
-  userDTO: UserDTO;
   id: number;
   emailUser: string;
 
-  constructor(private userService: UserService, private cookieService: CookieService) {
+  constructor(private userService: UserService, private cookieService: CookieService, private router: ActivatedRoute) {
   }
 
   ngOnInit(): void {
@@ -47,7 +46,7 @@ export class LoginComponent implements OnInit {
                 console.log(this.cookieService.get('user-id'));
               }
             );
-            this.loginForm.reset();
+            // this.loginForm.reset();
           }else{
             this.validMessage = 'Username or password is incorrect. Please try again.';
           }

@@ -11,11 +11,13 @@ import {CookieService} from 'ngx-cookie-service';
 export class AppComponent implements OnInit{
   title = 'AuctionFE';
   public categories;
-  constructor(private categoryService: CategoryService){
+  id: number;
+  constructor(private categoryService: CategoryService, public cookieService: CookieService){
   }
 
   ngOnInit(){
     this.getCategories();
+    this.id = +this.cookieService.get('user-id');
   }
 
   getCategories(){
