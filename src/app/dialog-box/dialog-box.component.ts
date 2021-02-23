@@ -50,7 +50,7 @@ export class DialogBoxComponent implements OnInit {
       this.biddingService.placeBid(this.idAuction, this.bidDTO).subscribe(
         data => {
           console.log(data);
-          this.biddingForm.reset();
+          // this.biddingForm.reset();
           return true;
         },
         error => {
